@@ -15,12 +15,12 @@ interface IFileUploadButton {
 
 const AutoFileUploader = ({
   name,
-   label,
-     accept,
-     sx,
-    icon,
-   variant = " contained  ",
-       onFileUpload,
+  label,
+  accept,
+  sx,
+  icon,
+  variant = " contained  ",
+  onFileUpload,
 }: IFileUploadButton) => {
   return (
     <Box>
