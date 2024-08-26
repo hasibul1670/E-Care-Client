@@ -21,11 +21,11 @@ const AutoFileUploader = ({
   icon,
   variant = " contained  ",
   onFileUpload,
-}: IFileUploadButton) => {
+}: any) => {
   return (
     <Box>
       <Button
-        component="label  "
+        component={label}
         role={undefined}
         variant={variant}
         tabIndex={-1}

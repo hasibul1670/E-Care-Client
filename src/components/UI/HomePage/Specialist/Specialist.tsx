@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Specialist = async () => {
-  const {data: specialties} = ["34"];
+  const data = ["34"];
 
   return (
     <Container>
@@ -26,7 +26,7 @@ const Specialist = async () => {
           </Typography>
         </Box>
         <Stack direction="row" gap={4} mt={5}>
-          {specialties?.slice(0, 6).map((specialty: any) => (
+          {data?.slice(0, 6).map((specialty: any) => (
             <Box
               key={specialty.id}
               sx={{

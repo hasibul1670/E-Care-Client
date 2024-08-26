@@ -14,7 +14,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
 
 const TopRatedDoctors = async () => {
-  const {data: doctors} = [];
+  const data = ["hasib"];
   //   console.log(doctors);
   return (
     <Box
@@ -39,7 +39,7 @@ const TopRatedDoctors = async () => {
 
       <Container sx={{margin: "30px auto"}}>
         <Grid container spacing={2}>
-          {doctors?.map((doctor: any) => (
+          {data?.map((doctor: any) => (
             <Grid item key={doctor.id} md={4}>
               <Card>
                 <Box
