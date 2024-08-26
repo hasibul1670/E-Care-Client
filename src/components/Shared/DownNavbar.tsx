@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { CgGym } from "react-icons/cg";
-import { FaBaby, FaBloggerB, FaHome, FaUmbrellaBeach, FaUpload } from "react-icons/fa";
-import { FaKitMedical } from "react-icons/fa6";
-import { GiMedicines } from "react-icons/gi";
-import { ImLab } from "react-icons/im";
-import { IoFastFoodOutline } from "react-icons/io5";
-import { MdHealthAndSafety, MdOutlinePets } from "react-icons/md";
+import {CgGym} from "react-icons/cg";
+import {FaBaby, FaBloggerB, FaHome, FaUmbrellaBeach, FaUpload} from "react-icons/fa";
+import {FaKitMedical} from "react-icons/fa6";
+import {GiMedicines} from "react-icons/gi";
+import {ImLab} from "react-icons/im";
+import {IoFastFoodOutline} from "react-icons/io5";
+import {MdHealthAndSafety, MdOutlinePets} from "react-icons/md";
 
 const DownNavbar = () => {
   return (

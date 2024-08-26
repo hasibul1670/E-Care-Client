@@ -149,7 +149,9 @@ const HomeDrawer: React.FC<any> = ({children}) => {
                     justifyContent: "center",
                   }}
                 >
-                  <p className="text-2xl text-cyan-700">{text.icon ? <text.icon /> : <TbMedicineSyrup />}</p>
+                  <p className="text-2xl text-cyan-700">
+                    {text.icon ? <text.icon /> : <TbMedicineSyrup />}
+                  </p>
                 </ListItemIcon>
                 <ListItemText primary={text.title} sx={{opacity: open ? 1 : 0}} />
               </ListItemButton>

@@ -10,7 +10,6 @@ const CommonLayout = ({children}: {children: React.ReactNode}) => {
 
       <HomeDrawer children={children} />
       {/* <Box className="min-h-screen">{children}</Box> */}
-    
     </>
   );
 };
