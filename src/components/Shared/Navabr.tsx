@@ -6,9 +6,8 @@ import Image from "next/image";
 import {useState} from "react";
 import {FaSearch, FaShoppingCart, FaUser} from "react-icons/fa";
 import logo from "../../../public/asset/home/logo.png";
-import DownNavbar from "./DownNavbar";
 
-const NavBar = () => {
+const NavBar: React.FC<any> = ({open}) => {
   const [count, setCount] = useState(0);
   const [searchText, setSearchText] = useState("");
   const [isOpenCart, setIsOpenCart] = useState(false);
@@ -19,19 +18,16 @@ const NavBar = () => {
   const items = Array.from({length: 40});
   return (
     <div className="flex flex-col">
-      <div className="  bg-white fixed  w-full h-20  flex justify-between items-center px-5">
-        <div className="font-bold w-1/5 ">
-          <Image
-            src={logo}
-            className="w-20 "
-            alt="Picture of the author"
-            width={100}
-            height={60}
-            quality={100}
-          />
-        </div>
+      <div
+        className={` bg-white fixed  ${open ? "w-5/6" : "w-full"} h-20  flex justify-between items-center px-2 pr-[5rem]`}
+      >
+        {!open && (
+          <div className="font-bold w-1/5 ">
+            <Image src={logo} className="w-20 " alt="Logo" width={100} height={60} quality={100} />
+          </div>
+        )}
         {/* <p className="font-bold w-1/5 ">{searchText}</p> */}
-        <div className="w-2/5 flex items-center">
+        <div className={` flex items-center ${open ? "w-3/5 ml-[1rem]" : "w-2/5"}`}>
           <input
             type="text"
             id="first_name"
@@ -43,7 +39,7 @@ const NavBar = () => {
           <FaSearch className="text-[3rem] cursor-pointer rounded-r-lg bg-cyan-700 p-1  text-white" />
         </div>
         {/* Profile */}
-        <div className="flex w-1/5 gap-2 items-center">
+        <div className={`flex ${open ? " w-2/5  flex justify-end" : "w-1/5"} gap-2 items-center`}>
           <section className="flex items-center cursor-pointer hover:bg-cyan-200 border-cyan-400 border rounded-lg px-2 py-1">
             <FaUser className="text-2xl mr-2.5" />
             <p>Hasibul Islam</p>
@@ -97,9 +93,9 @@ const NavBar = () => {
           )}
         </AnimatePresence>
       </div>
-      <div className="mt-[5rem] ">
+      {/* <div className="mt-[5rem] ">
         <DownNavbar />
-      </div>
+      </div> */}
     </div>
   );
 };
